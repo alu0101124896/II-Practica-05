@@ -15,7 +15,7 @@ public class DictationScript : MonoBehaviour {
   void Start() {
     VoiceRecController.OnClickStartDictRecEvent += dictationStart;
     VoiceRecController.OnClickStopDictRecEvent += dictationStop;
-    this.dictationStart();
+    // this.dictationStart();
   }
 
   void dictationStart() {
@@ -40,7 +40,7 @@ public class DictationScript : MonoBehaviour {
       Debug.LogErrorFormat("Dictation error: {0}; HResult = {1}.", error, hresult);
     };
 
-    PhraseRecognitionSystem.Shutdown();
+    // PhraseRecognitionSystem.Shutdown();
     m_DictationRecognizer.Start();
   }
 

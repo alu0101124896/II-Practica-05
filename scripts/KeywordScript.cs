@@ -65,6 +65,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         case "Para":
           m_xAxis = 0.0f;
+          m_yAxis = 0.0f;
           break;
 
         case "Izquierda":
@@ -98,6 +99,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     void keywordStop() {
       m_Recognizer.Dispose();
       m_Recognizer = null;
+      PhraseRecognitionSystem.Shutdown();
     }
 
     void OnDisable() {
